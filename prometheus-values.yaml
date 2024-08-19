@@ -1,0 +1,18 @@
+prometheus:
+  service:
+    type: NodePort
+    nodePort: 30090
+  prometheusSpec:
+    serviceMonitorSelectorNilUsesHelmValues: false
+alertmanager:
+  service:
+    type: NodePort
+    nodePort: 30091
+grafana:
+  enabled: false
+nodeExporter:
+  enabled: true
+kubeStateMetrics:
+  enabled: true
+
+
